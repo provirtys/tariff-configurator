@@ -35,7 +35,7 @@ import VFormGroup from '@components/ui/v-form-group/v-form-group.vue';
 import VInput from '@components/ui/v-input/v-input.vue';
 import VButton from '@components/ui/v-button/v-button.vue';
 import { isPhoneValid } from '@/helpers/phone';
-import type { IMessage } from '@types/message';
+import type { IMessage } from '@/types/message';
 
 const tariffStore = useTariffStore()
 const { fetchSettings } = tariffStore

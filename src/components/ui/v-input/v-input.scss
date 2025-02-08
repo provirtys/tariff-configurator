@@ -53,7 +53,7 @@
   }
 
   &__message {
-    @include font(12px, 18px, $letter-spacing: 0.03em);
+    @include font(12px, 18px);
     color: var(--gray-2);
     margin-top: 10px;
   }

@@ -9,9 +9,9 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, watch, nextTick } from 'vue';
-import { type IProps, defaultProps } from './types'
+import { type IProps } from './types'
 
-const props = withDefaults(defineProps<IProps>(), defaultProps)
+const props = defineProps<IProps>()
 
 const model = defineModel()
 

@@ -18,7 +18,7 @@ import { computed } from 'vue';
 import VIcon from '@ui/v-icon/v-icon.vue';
 import { formatPhone } from '@/helpers/phone'
 import { type IProps, defaultProps } from './types';
-import type {IMessage} from '@/types/message';
+import type { IMessage } from '@/types/message';
 
 const props = withDefaults(defineProps<IProps>(), defaultProps)
 
@@ -57,7 +57,7 @@ const wrapperClasses = computed(() => ([
 ]))
 
 const onInput = (event: Event) => {
-  if (props.type === 'tel'){
+  if (props.type === 'tel') {
     const value = (event.target as HTMLInputElement).value
     model.value = formatPhone(value)
   }

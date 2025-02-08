@@ -1,4 +1,4 @@
-import type { IMessage } from '@types/message';
+import type { IMessage } from '@/types/message';
 
 export type IPropType = 'text' | 'tel'
 
@@ -10,6 +10,6 @@ export interface IProps{
 }
 
 export const defaultProps = {
-  type: 'text',
+  type: 'text' as IPropType,
   required: false,
 }
