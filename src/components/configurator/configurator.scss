@@ -1,0 +1,15 @@
+.configurator {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--gray-1);
+  padding: 120px;
+
+  &__form-title {
+    @include font(64px, 100%, 700, $letter-spacing: -0.03em);
+    margin-bottom: 90px;
+  }
+
+  &__form-input {
+    margin-bottom: 90px;
+  }
+}
