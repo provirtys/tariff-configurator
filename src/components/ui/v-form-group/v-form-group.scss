@@ -1,0 +1,7 @@
+.form-group {
+
+  &__title {
+    @include font(32px, 100%, 500, $letter-spacing: -0.03em);
+    margin-bottom: 40px;
+  }
+}
