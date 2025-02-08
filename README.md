@@ -1,5 +1,62 @@
-# Vue 3 + TypeScript + Vite
+# Тестовое задание для КайКом экспертс
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**Описание проекта**  
+Приложение имитирует функционал выбора тарифа
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 🚀 Функциональность
+
+- Настройка опций тарифа:
+  - **Минуты**
+  - **СМС**
+  - **ГБ интернета**
+  - **Аренда Wi-Fi роутера**
+
+- Автоматический расчет стоимости тарифа в зависимости от выбранных опций
+- При отправке формы всплывает alert с данными о выбранных опциях
+
+## 🛠️ Технологии
+
+- [Vue 3](https://vuejs.org/) — фронтенд-фреймворк для построения пользовательских интерфейсов  
+- [Pinia](https://pinia.vuejs.org/) — управление состоянием приложения  
+- [TypeScript](https://www.typescriptlang.org/) - типизация для повышения надежности кода
+- [Vuetify](https://vuetifyjs.com/) — библиотека компонентов для создания современных и отзывчивых интерфейсов.
+
+### Требования для запуска в локальной среде
+- Node.js 18.20.0 версии или выше
+
+### Установка зависимостей
+```npm install```
+### Запуск локального сервера
+```npm run dev```
+### Запуск билда 
+```npm run build```
+
+### Структура проекта
+
+```
+./
+└── tariff-configurator
+    ├── public # Папка с шаблонами и статичными файлами
+    ├── src # Весь исходный код проекта
+    │   ├── assets # Дополнительные статические ресурсы
+    │   │   └── fonts
+    │   │   └── style
+    │   │   └── icons
+    │   │   └── images
+    │   ├── components # Все vue компоненты проекта (*)
+    │   │   ├── component
+    │   │   ├── component
+    │   │   ├── ...
+    │   │   ├── UI # Простые ui эелементы интерфейса: кнопки, аккордеоны, модалки и т.д.
+    │   │   │   ├── v-button
+    │   │   │   │   └── v-button.vue
+    │   │   │   │   └── v-button.scss
+    │   │   │   ├── v-input
+    │   │   │   │   └── v-input.vue
+    │   │   │   │   └── v-input.scss
+    │   │   │   └── ...
+    │   ├── store # Папка с хранилищами приложения
+    │   ├── helpers # Папка со вспомогательными функциями
+    │   ├── types # Папка с типами отдельных сущностей приложения
+    │   ├── main.ts
+    └── └── App.vue
