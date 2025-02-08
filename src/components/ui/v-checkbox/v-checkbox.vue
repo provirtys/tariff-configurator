@@ -2,7 +2,7 @@
   <label class="checkbox" for="checkbox">
     <input class="checkbox__input" type="checkbox" v-model="model" :checked="model" id="checkbox">
     <span class="checkbox__check">
-      <v-icon height="24" name="check" width="24" />
+      <v-icon size="24" name="check"/>
     </span>
     <div v-if="label" class="checkbox__label" v-html="label"></div>
   </label>

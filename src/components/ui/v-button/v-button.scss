@@ -8,12 +8,16 @@
   border-radius: 15px;
   white-space: nowrap;
   transition: 0.3s ease-in-out;
-  transition-property: background-color, color;
+  transition-property: background-color;
   cursor: pointer;
   min-width: 250px;
 
   &--primary {
     background-color: var(--primary);
+
+    &:hover{
+      background-color: var(--primary-hover);
+    }
   }
 
   &--black {
