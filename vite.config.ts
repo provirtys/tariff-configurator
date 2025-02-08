@@ -6,7 +6,7 @@ import createSvgSpritePlugin from 'vite-plugin-svg-sprite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base:'./',
+  base:'/tariff-configurator',
   plugins: [
     vue(),
     createSvgSpritePlugin({
