@@ -1,0 +1,42 @@
+.checkbox{
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  cursor: pointer;
+  
+  &__input{
+    display: none;
+
+    &:checked ~ .checkbox__check {
+      background: var(--primary);
+
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__check {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray-3);
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    width: 24px;
+    height: 24px;
+    padding: 7px 5px;
+    background: var(--white);
+
+    .icon {
+      opacity: 0;
+    }
+  }
+
+  &__label{
+    @include font(24px, 100%)
+  }
+}
