@@ -1,8 +1,8 @@
 <template>
   <div :class="wrapperClasses">
     <div class="input-wrapper__input-container">
-      <input class="input-wrapper__input" type="tel" v-model="model" :placeholder="computedPlaceholder"
-        @input="onInput" />
+      <input class="input-wrapper__input" :type="type" v-model="model" :placeholder="computedPlaceholder" ref="inputRef"
+        v-phone-mask:model />
       <div class="input-wrapper__icon">
         <v-icon size="20" name="warning" />
       </div>
@@ -14,15 +14,15 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { ref, computed } from 'vue';
 import VIcon from '@ui/v-icon/v-icon.vue';
-import { formatPhone } from '@/helpers/phone'
 import { type IProps, defaultProps } from './types';
 import type { IMessage } from '@/types/message';
 
 const props = withDefaults(defineProps<IProps>(), defaultProps)
 
-const model = defineModel()
+const model = defineModel<String>()
+const inputRef = ref<HTMLInputElement | null>(null)
 
 const computedMessage = computed<IMessage | null>(() => {
   if (props.message) {
@@ -55,13 +55,6 @@ const wrapperClasses = computed(() => ([
     'input-wrapper--error': computedMessage.value?.type === 'error'
   }
 ]))
-
-const onInput = (event: Event) => {
-  if (props.type === 'tel') {
-    const value = (event.target as HTMLInputElement).value
-    model.value = formatPhone(value)
-  }
-};
 
 </script>
 
